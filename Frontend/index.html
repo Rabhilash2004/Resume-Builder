@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder Premium</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-badge">C</div>
+      <div class="logo-text">
+        <span class="logo-title">Resume-Builder Premium</span>
+        <span class="logo-sub">Resume Studio</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#features">AI Resume Builder</a>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+      <a href="#resources">Resources</a>
+      <a href="#data">Human Data ↗</a>
+    </nav>
+
+    <div class="top-actions">
+      <a class="link-btn" href="login.html">LOG IN</a>
+      <a class="solid-btn" href="register.html">SIGN UP</a>
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <section class="hero-grid">
+      <div class="hero-left">
+        <div class="trust-text reveal">TRUSTED BY OVER 1.2 MILLION JOB SEEKERS!</div>
+
+        <h1 class="hero-title reveal">
+          Land your <span id="rotatingWord">dream job.</span><br />
+          Without the stress.
+        </h1>
+
+        <p class="hero-subtitle reveal">
+          Build a modern resume, improve your profile, and create a strong career-ready presentation in minutes.
+        </p>
+
+        <div class="feature-row reveal" id="features">
+          <div class="feature-pill">✓ AI Resume Builder</div>
+          <div class="feature-pill">✓ Automated Job Tracking</div>
+          <div class="feature-pill">✓ Optimize your LinkedIn Profile</div>
+          <div class="feature-pill">✓ And Much More...</div>
+        </div>
+
+        <div class="cta-wrap reveal">
+          <a class="hero-cta" href="register.html">
+            <span>SIGN UP FOR FREE</span>
+            <span class="cta-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="mini-stats reveal" id="data">
+          <div class="stat-card">
+            <div class="stat-number" data-target="125">0</div>
+            <div class="stat-label">Resume Templates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-label">% Success Boost</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="24">0</div>
+            <div class="stat-label">Auto Sections</div>
+          </div>
+        </div>
+
+        <div class="testimonial-box reveal">
+          <div class="avatar-stack">
+            <img src="https://i.pravatar.cc/80?img=12" alt="user 1" />
+            <img src="https://i.pravatar.cc/80?img=32" alt="user 2" />
+            <img src="https://i.pravatar.cc/80?img=45" alt="user 3" />
+            <img src="https://i.pravatar.cc/80?img=18" alt="user 4" />
+            <img src="https://i.pravatar.cc/80?img=24" alt="user 5" />
+          </div>
+          <blockquote class="hero-quote" id="testimonialText">
+            "I got recruiters from Amazon, Wise, and other companies reaching out to me already!!"
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mockup-wrap" id="mockup">
+          <div class="mockup-card card-a">
+            <div class="mockup-head">
+              <div class="mock-avatar"></div>
+              <div>
+                <div class="mock-name">Sophia Rodriguez</div>
+                <div class="mock-role">Marketing Manager</div>
+              </div>
+            </div>
+            <div class="mock-line short"></div>
+            <div class="mock-line"></div>
+            <div class="mock-chip-row">
+              <span>SEO</span><span>Branding</span><span>Analytics</span>
+            </div>
+          </div>
+
+          <div class="mockup-card card-b">
+            <div class="mock-title">Emily Johnson</div>
+            <div class="mock-line"></div>
+            <div class="mock-line short"></div>
+            <div class="mock-line"></div>
+            <div class="mock-line short"></div>
+          </div>
+
+          <div class="mockup-card card-c">
+            <div class="mock-title dark">Nick Harrison</div>
+            <div class="mock-line dark-line"></div>
+            <div class="mock-line dark-line short"></div>
+            <div class="mock-chip-row dark">
+              <span>Java</span><span>Spring Boot</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-note">
+          <div class="floating-icon">👁️</div>
+          <div>
+            <div class="floating-title" id="floatingText">Someone from Düsseldorf, Germany is also here</div>
+            <div class="floating-sub">just now</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos-section reveal" id="services">
+      <div class="logos-title">Trusted workflow for students, freshers, and job seekers</div>
+      <div class="logos-strip">
+        <span>Resume Builder</span>
+        <span>ATS Checker</span>
+        <span>Cover Letter</span>
+        <span>LinkedIn Optimizer</span>
+        <span>Job Tracker</span>
+        <span>Resume Builder</span>
+        <span>ATS Checker</span>
+        <span>Cover Letter</span>
+      </div>
+    </section>
+
+    <section class="feature-grid reveal" id="resources">
+      <div class="feature-box">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast Resume Creation</h3>
+        <p>Fill sections once and generate a clean professional resume instantly.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">✦</div>
+        <h3>Live Editing</h3>
+        <p>See every change reflected in real time inside the resume preview panel.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">⬇</div>
+        <h3>PDF Export</h3>
+        <p>Save the final resume as a downloadable PDF with one click.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">◌</div>
+        <h3>Modern Templates</h3>
+        <p>Switch styles with a single selection for a premium visual finish.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="landing.js"></script>
+</body>
+</html>

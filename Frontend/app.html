@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Builder | Resume Builder Premium</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="left-panel">
+      <div class="brand-block">
+        <div class="brand-mark">RB</div>
+        <div>
+          <div class="brand-title">Resume Builder</div>
+          <div class="brand-sub">Premium Studio</div>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Personal</h3>
+        </div>
+        <input id="fullName" class="input" placeholder="Full name">
+        <input id="title" class="input" placeholder="Professional title">
+        <input id="email" class="input" placeholder="Email">
+        <input id="phone" class="input" placeholder="Phone">
+        <input id="location" class="input" placeholder="Location">
+        <input id="website" class="input" placeholder="Website">
+        <input id="linkedin" class="input" placeholder="LinkedIn">
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Summary</h3>
+        </div>
+        <textarea id="summary" class="textarea" placeholder="Write a powerful summary..."></textarea>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Skills</h3>
+          <button class="mini-btn" onclick="addSkill()">+ Add</button>
+        </div>
+        <div id="skillsList"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Experience</h3>
+          <button class="mini-btn" onclick="addExperience()">+ Add</button>
+        </div>
+        <div id="experienceList"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Education</h3>
+          <button class="mini-btn" onclick="addEducation()">+ Add</button>
+        </div>
+        <div id="educationList"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Projects</h3>
+          <button class="mini-btn" onclick="addProject()">+ Add</button>
+        </div>
+        <div id="projectsList"></div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Certifications</h3>
+          <button class="mini-btn" onclick="addCertification()">+ Add</button>
+        </div>
+        <div id="certList"></div>
+      </div>
+    </aside>
+
+    <main class="center-panel">
+      <div class="topbar glass">
+        <div>
+          <div class="topbar-title">Build your resume</div>
+          <div class="topbar-sub" id="autosaveText">Draft ready</div>
+        </div>
+
+        <div class="topbar-actions">
+          <select id="templateSelect" class="select" onchange="applyTemplate()">
+            <option value="modern">Modern</option>
+            <option value="classic">Classic</option>
+          </select>
+
+          <button class="secondary-btn" onclick="saveResume()">Save</button>
+          <button class="primary-btn" onclick="downloadPdf()">Download PDF</button>
+          <button class="danger-btn" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <div class="resume-wrap" id="previewSheet">
+        <div class="resume-sheet modern">
+          <div class="resume-header">
+            <div>
+              <h1 id="pFullName">Your Name</h1>
+              <h2 id="pTitle">Professional Title</h2>
+            </div>
+            <div class="resume-contact">
+              <div id="pEmail">email@example.com</div>
+              <div id="pPhone">+91 00000 00000</div>
+              <div id="pLocation">Location</div>
+              <div id="pWebsite">Website</div>
+              <div id="pLinkedin">LinkedIn</div>
+            </div>
+          </div>
+
+          <section>
+            <h3>Summary</h3>
+            <p id="pSummary">Write your summary here.</p>
+          </section>
+
+          <section>
+            <h3>Skills</h3>
+            <div id="pSkills" class="chip-row"></div>
+          </section>
+
+          <section>
+            <h3>Experience</h3>
+            <div id="pExperience"></div>
+          </section>
+
+          <section>
+            <h3>Education</h3>
+            <div id="pEducation"></div>
+          </section>
+
+          <section>
+            <h3>Projects</h3>
+            <div id="pProjects"></div>
+          </section>
+
+          <section>
+            <h3>Certifications</h3>
+            <div id="pCertifications"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <aside class="right-panel">
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Style</h3>
+        </div>
+
+        <label class="label">Accent color</label>
+        <input id="accent" type="color" value="#67d7c2" onchange="applyStyle()">
+
+        <label class="label">Font size</label>
+        <input id="fontSize" type="range" min="12" max="20" value="15" oninput="applyStyle()">
+
+        <label class="label">Completion</label>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div id="progressText" class="progress-text">0%</div>
+      </div>
+
+      <div class="panel-card">
+        <div class="panel-head">
+          <h3>Actions</h3>
+        </div>
+        <button class="secondary-btn full" onclick="fillSample()">Load sample data</button>
+        <button class="secondary-btn full" onclick="clearAll()">Clear all</button>
+      </div>
+
+      <div class="panel-card small-note">
+        Tip: edit any field and the preview updates instantly.
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
